@@ -4,34 +4,69 @@
 }
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
+@media (min-width: 574px){
+    .container{
+        max-width: 540px;
+    }
+    .feature-img{
+        max-width: 0px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .feature-img{
+        max-width: 200px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+    .feature-img{
+        max-width: 300px;
+    }
+}
+@media (min-width: 1100px){
+    .container{
+        max-width: 1148px;
+    }
+    .feature-img{
+        max-width:fit-content;
+    }
+}
+
 .head{
-    height: 80vh;
+    height: 100vh;
     background-image: url("../dasar/assets/img/group.png");
     background-position: center;
     padding-left: 5%;
     padding-right: 5%;
     background-size: cover;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
+    background-attachment: scroll;
 }
 
 .navbar{
     width: 100%;
     height: 10vh;
     margin: auto;
+    padding: 1.5rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     
 }
 .logo{
     width: 30px;
     cursor: pointer;
-    margin-top: 16px;
 }
 
 nav{
@@ -57,6 +92,10 @@ nav ul li a{
     margin-left: 10%;
 }
 
+.justify-content-center{
+    justify-content: center;
+}
+
 .content h1{
     font-size: 50px;
     font-weight: 200;
@@ -80,11 +119,13 @@ nav ul li a{
     text-decoration: none;
     color: #fff;
     box-shadow: 3px 8px 22px rgb(34, 13, 54);
+    font-size: 1rem;
 }    
 
 .font-h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 600px;
+    font-size: 2rem;
 }
 .font-p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -92,7 +133,75 @@ nav ul li a{
 
 .feature-img{
     height: 70%;
-    position: absolute;
-    bottom: 0;
-    right: 160px;
+    position:absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.page-section{
+    padding: 8rem 0;
+}
+
+.promotion-bg{
+    background-color: rgb(199, 199, 199);
+}
+
+.h1-white{
+    color: white;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+    width: 100%;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.img-card{
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    object-fit: cover;
+}
+.card{
+    flex-grow: 100%;
+    margin: 20px;
+    align-items: center;
+    border: 1px darkgray;
+    box-shadow: darkslategrey;
+    text-align: center;
+}
+
+.card h2{
+    margin: 0.5rem 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card p{
+    margin: 0.5rem;
+}
+
+.text-center{
+    text-align: center !important;
+}
+hr{
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    justify-content: center;
+}
+
+hr.divider{
+    max-width: 3.25rem;
+    border-width: 0.2rem;
+    border-color: rgb(221, 136, 32);
+    margin-top: 1rem;
+}
+
+.bg-img{
+    height: 70vh;
+    background-image: url("/assets/img/20937a2824af44e7.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
