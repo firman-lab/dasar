@@ -2,10 +2,26 @@
     margin: 0;
     padding: 0;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .container {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 400px){
+    .container{
+        max-width: 300px;
+    }
+    .feature-img{
+        max-width: 0px;
+        height: auto;
+    }
 }
 @media (min-width: 574px){
     .container{
@@ -13,15 +29,18 @@
     }
     .feature-img{
         max-width: 0px;
+        height: auto;
     }
 }
 
 @media (min-width: 768px){
     .container{
         max-width: 720px;
+        height: auto;
     }
     .feature-img{
         max-width: 200px;
+        height: auto;
     }
 }
 @media (min-width: 992px){
@@ -30,6 +49,7 @@
     }
     .feature-img{
         max-width: 300px;
+        height: auto;
     }
 }
 @media (min-width: 1100px){
@@ -37,10 +57,41 @@
         max-width: 1148px;
     }
     .feature-img{
-        max-width:fit-content;
+        max-width:100%;
+        height: auto;
     }
 }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  line-height: 1.2;
+} 
 
+h1, .h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2, .h2 {
+    font-size: 2rem;
+  }
+  
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+  
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+  
+  h5, .h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6, .h6 {
+    font-size: 1rem;
+  }
 .head{
     height: 100vh;
     background-image: url("../dasar/assets/img/group.png");
@@ -122,10 +173,24 @@ nav ul li a{
     font-size: 1rem;
 }    
 
+.btn-order{
+    display: inline-block;
+    background:linear-gradient(45deg, rgba(91, 29, 104, 0.667), #a785bb);
+    border-radius: 6px;
+    padding: 15px 50px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 3px 8px 18px rgb(34, 13, 54);
+    font-size: 1rem;
+    margin-top: 4rem;
+}
+
+
 .font-h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 600px;
-    font-size: 2rem;
+    font-weight: 800px;
+    text-align: center;
 }
 .font-p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -146,29 +211,27 @@ nav ul li a{
 }
 
 .h1-white{
-    color: white;
     text-align: center;
 }
 .cards{
     display: flex;
-    justify-content: space-between;
-    margin-top: 56px;
-    width: 100%;
+    flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
 .img-card{
     width: 300px;
-    height: 200px;
+    height: 300px;
     margin: 0;
     object-fit: cover;
+    box-shadow: 0 7px 10px 0 #a785bb;
 }
-.card{
-    flex-grow: 100%;
+.cards .card{
+    width: auto;
     margin: 20px;
-    align-items: center;
+    height: max-content;
     border: 1px darkgray;
-    box-shadow: darkslategrey;
+    box-shadow: 0 5px 5px 0 darkslategrey;
     text-align: center;
 }
 
@@ -176,9 +239,18 @@ nav ul li a{
     margin: 0.5rem 0.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.card h4{
+    font-weight: 300;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
 
 .card p{
-    margin: 0.5rem;
+    font-size: 18px;
+    padding-bottom: 0.3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 70;
+
 }
 
 .text-center{
@@ -199,9 +271,122 @@ hr.divider{
 }
 
 .bg-img{
-    height: 70vh;
-    background-image: url("/assets/img/20937a2824af44e7.webp");
+    /* height: 70vh; */
+    /* background-image: url("/assets/img/20937a2824af44e7.webp"); */
+    background-color: aliceblue;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.col-lg-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+
+  .col-lg-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .col-lg-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-lg-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+
+  .col-lg-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .col-lg-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  .col-lg-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+
+  .col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-xl,
+.col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
+.col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
+.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
+.col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col,
+.col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+  .mx-auto{
+      margin-right: auto !important;
+  }
+
+.testimonial{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+.testimonial .testimonial-item{
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonial .testimonial-item img{
+    width: 12rem;
+    box-shadow: 0 5px 5px 0 #adb5bd;
+}
+.testimonial .testimonial-item p{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+.rounded-circle{
+    border-radius: 50% !important;
+}
+
+.mb-2{
+    margin-bottom: 2rem !important;
+}
+.mb-3{
+    margin-bottom: 1rem !important;
+}
+
+.mb-5{
+    margin-bottom: 3rem;
 }
